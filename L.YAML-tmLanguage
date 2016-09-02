@@ -13,7 +13,7 @@ patterns:
 
 - comment: string constant
   name: string.quoted.double
-  match: \".*\"
+  match: \".*?\"
 
 - comment: keywords
   name: keyword

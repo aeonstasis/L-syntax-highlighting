@@ -27,7 +27,7 @@
 			<key>comment</key>
 			<string>string constant</string>
 			<key>match</key>
-			<string>\".*\"</string>
+			<string>\".*?\"</string>
 			<key>name</key>
 			<string>string.quoted.double</string>
 		</dict>
