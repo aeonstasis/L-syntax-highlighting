@@ -1,7 +1,7 @@
 # [PackageDev] target_format: plist, ext: tmLanguage
 name: L
 scopeName: source.l
-fileTypes: [L, l]
+fileTypes: [L]
 uuid: 8583206a-b9ae-4e78-8e40-508dcaa554b5
 
 patterns:
