@@ -23,6 +23,10 @@ patterns:
   name: keyword.operator
   match: \s*(=|(<>)|(<=)|(>=)|<|>|-|&|\||\*|\/|\+|@|!|#)\s*
 
+- comment: variables
+  name: variable
+  match: (\w|_)(\w|\d|_)*
+
 repository:
   multilinecomment:
     name: comment.block

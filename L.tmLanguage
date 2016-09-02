@@ -46,6 +46,14 @@
 			<key>name</key>
 			<string>keyword.operator</string>
 		</dict>
+		<dict>
+			<key>comment</key>
+			<string>variables</string>
+			<key>match</key>
+			<string>(\w|_)(\w|\d|_)*</string>
+			<key>name</key>
+			<string>variable</string>
+		</dict>
 	</array>
 	<key>repository</key>
 	<dict>
