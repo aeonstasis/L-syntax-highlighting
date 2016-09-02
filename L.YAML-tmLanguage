@@ -6,6 +6,7 @@ uuid: 8583206a-b9ae-4e78-8e40-508dcaa554b5
 
 patterns:
 - include: '#multilinecomment'
+
 - comment: constants in L
   name: constant.numeric
   match: \d+
@@ -30,5 +31,5 @@ repository:
     patterns:
     - include: "#multilinecomment"
       name: comment.block
-    - match: ([^\*]|\*(?=[^\)]))* 
+    - match: ([^\*]|(\*(?=[^\)])))
 ...
