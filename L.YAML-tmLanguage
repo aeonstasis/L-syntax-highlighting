@@ -1,0 +1,32 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+name: L
+scopeName: source.l
+fileTypes: [L, l]
+uuid: 8583206a-b9ae-4e78-8e40-508dcaa554b5
+
+patterns:
+- comment: comments like (* *)
+  name: comment.block
+  begin: \(\*
+  end: \*\)
+
+- comment: constants in L
+  name: constant.numeric
+  match: \d+
+
+- comment: string constant
+  name: string.quoted.double
+  match: \".*\"
+
+- comment: keywords
+  name: keyword
+  match: (^|\s+)(let|in|fun|with|lambda|if|then|else|print|readInt|readString|isNil|Nil)\s+
+
+- comment: operators
+  name: keyword.operator
+  match: \s*(=|(<>)|(<=)|(>=)|<|>|-|&|\|\*|\/|\+|@|!|#)\s*
+
+- comment: identifiers
+  name: variable
+  match: \s+(\w|_)+((\w|_)|\d)*\s*
+...

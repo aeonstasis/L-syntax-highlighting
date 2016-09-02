@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>L</string>
+		<string>l</string>
+	</array>
+	<key>name</key>
+	<string>L</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>begin</key>
+			<string>\(\*</string>
+			<key>comment</key>
+			<string>comments like (* *)</string>
+			<key>end</key>
+			<string>\*\)</string>
+			<key>name</key>
+			<string>comment.block</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>constants in L</string>
+			<key>match</key>
+			<string>\d+</string>
+			<key>name</key>
+			<string>constant.numeric</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>string constant</string>
+			<key>match</key>
+			<string>\".*\"</string>
+			<key>name</key>
+			<string>string.quoted.double</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>keywords</string>
+			<key>match</key>
+			<string>(^|\s+)(let|in|fun|with|lambda|if|then|else|print|readInt|readString|isNil|Nil)\s+</string>
+			<key>name</key>
+			<string>keyword</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>operators</string>
+			<key>match</key>
+			<string>\s*(=|(&lt;&gt;)|(&lt;=)|(&gt;=)|&lt;|&gt;|-|&amp;|\|\*|\/|\+|@|!|#)\s*</string>
+			<key>name</key>
+			<string>keyword.operator</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>identifiers</string>
+			<key>match</key>
+			<string>\s+(\w|_)+((\w|_)|\d)*\s*</string>
+			<key>name</key>
+			<string>variable</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.l</string>
+	<key>uuid</key>
+	<string>8583206a-b9ae-4e78-8e40-508dcaa554b5</string>
+</dict>
+</plist>
