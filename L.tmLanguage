@@ -12,14 +12,8 @@
 	<key>patterns</key>
 	<array>
 		<dict>
-			<key>begin</key>
-			<string>\(\*</string>
-			<key>comment</key>
-			<string>comments like (* *)</string>
-			<key>end</key>
-			<string>\*\)</string>
-			<key>name</key>
-			<string>comment.block</string>
+			<key>include</key>
+			<string>#multilinecomment</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -41,7 +35,7 @@
 			<key>comment</key>
 			<string>keywords</string>
 			<key>match</key>
-			<string>(^|\s+)(let|in|fun|with|lambda|if|then|else|print|readInt|readString|isNil|Nil)\s+</string>
+			<string>\b(let|in|fun|with|lambda|if|then|else|print|readInt|readString|isNil|Nil)\b</string>
 			<key>name</key>
 			<string>keyword</string>
 		</dict>
@@ -49,19 +43,36 @@
 			<key>comment</key>
 			<string>operators</string>
 			<key>match</key>
-			<string>\s*(=|(&lt;&gt;)|(&lt;=)|(&gt;=)|&lt;|&gt;|-|&amp;|\|\*|\/|\+|@|!|#)\s*</string>
+			<string>\s*(=|(&lt;&gt;)|(&lt;=)|(&gt;=)|&lt;|&gt;|-|&amp;|\||\*|\/|\+|@|!|#)\s*</string>
 			<key>name</key>
 			<string>keyword.operator</string>
 		</dict>
-		<dict>
-			<key>comment</key>
-			<string>identifiers</string>
-			<key>match</key>
-			<string>\s+(\w|_)+((\w|_)|\d)*\s*</string>
-			<key>name</key>
-			<string>variable</string>
-		</dict>
 	</array>
+	<key>repository</key>
+	<dict>
+		<key>multilinecomment</key>
+		<dict>
+			<key>begin</key>
+			<string>\(\*</string>
+			<key>end</key>
+			<string>\*\)</string>
+			<key>name</key>
+			<string>comment.block</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#multilinecomment</string>
+					<key>name</key>
+					<string>comment.block</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>([^\*]|\*(?=[^\)]))*</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
 	<key>scopeName</key>
 	<string>source.l</string>
 	<key>uuid</key>
